@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title> <!--Bloque dinamico para el titulo-->
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles.css") }}">
+</head>
+<body>
+    <div class="container">
+        {% block container %}{% endblock container %} <!--Bloque dinamico para el div container-->
+
+    </div>
+</body>
+</html>

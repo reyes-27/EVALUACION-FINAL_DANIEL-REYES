@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Ejercicio 1{% endblock title %}
+
+{% block container %}
+<div class="formulario-1">
+    <h1>Formulario de Notas</h1>
+    <form action="/ejercicio1" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+        <br>
+        <label for="cantidad_tarros">Cantidad de tarros:</label>
+        <input type="number" id="cantidad_tarros" name="cantidad_tarros" required>
+        <br>
+        <br>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if method == "POST" %}
+        {% if error%}
+            <h3>{{error}}</h3>
+        {% else %}
+            <h2>Nombre del cliente : {{nombre}}</h2>
+            <h2>Total sin descuento : ${{precio}}</h2>
+            <h2>Descuento total : ${{descuento_total}}</h2>
+            <h2>El total a pagar es de: ${{precio_total}}</h2>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock container %}

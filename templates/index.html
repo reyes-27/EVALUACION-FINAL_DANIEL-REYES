@@ -1,0 +1,12 @@
+{% extends "base.html" %} <!--Extendemos de nuestra plantilla master-->
+
+{% block title %}Home{% endblock title %} <!--abrimos el bloque title-->
+
+{% block container %}
+
+<ul class="ejercicios_list" style="display: flex;">
+    <li class="ejercicio"><a href="/ejercicio1"  style="background-color: #B00EB0; ">EJERCICIO 1</a></li>
+    <li class="ejercicio"><a href="/ejercicio2"  style="background-color: #8BC820;">EJERCICIO 2</a></li>
+</ul>
+
+{% endblock container %} <!--abrimos el bloque container-->

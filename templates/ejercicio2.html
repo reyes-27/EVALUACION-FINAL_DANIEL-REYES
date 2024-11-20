@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Ejercicio 2{% endblock title %}
+
+{% block container %}
+<div class="formulario-1">
+    <h1>Formulario de Notas</h1>
+    <form action="/ejercicio2" method="POST">
+        <label for="nombre">Nombre :</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit" style="margin-top: 10px;">Verificar</button>
+    </form>
+    {% if method == "POST" %}
+        <h3>{{mensaje}}</h3>
+    {% endif %}
+</div>
+{% endblock container %}
